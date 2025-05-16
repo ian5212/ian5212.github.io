@@ -1,0 +1,191 @@
+/* laptop devices */
+@media screen and (min-width: 961px){
+    
+
+    @font-face {
+        font-family: loona_font ;
+        src: url('../fonts/210B.ttf');
+    }
+    
+    @font-face {
+        font-family: p_font;
+        src: url('../fonts/Avenir.ttc')
+    }
+    
+    p {
+        color:#fff;
+        text-align: center;
+        font-family: p_font;
+    }
+    
+    h1 {
+        text-align: center;
+        font-family: 'loona_font';
+        font-size: 400%;
+        color: #fff;
+        margin-bottom: 0%;
+    }
+    
+    h2 {
+        text-align: center;
+        font-family: 'loona_font';
+        font-size: 100%;
+        color: #fff;
+        margin-top: 0% ;
+    }
+    
+    #row {
+        
+        height: 200px;
+        text-align: center;
+        margin-top: 1%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    #div_boxleft {
+        width: 200px;
+        height: 200px;
+        margin-right: 1%;
+    }
+    
+    #div_boxcenter {
+        width: 200px;
+        height: 200px;
+        margin-right: 1%;
+    }
+    #div_boxright {
+        width: 200px;
+        height: 200px;
+    }
+    
+    }
+    
+    /* tablet devices */
+    @media screen and (min-width: 461px) and (max-width: 960px){
+        
+    
+        @font-face {
+            font-family: loona_font ;
+            src: url('../fonts/210B.ttf');
+        }
+        
+        @font-face {
+            font-family: p_font;
+            src: url('../fonts/Avenir.ttc')
+        }
+        
+        p {
+            color:#fff;
+            text-align: center;
+            font-family: p_font;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: 'loona_font';
+            font-size: 400%;
+            color: #fff;
+            margin-bottom: 0%;
+        }
+        
+        h2 {
+            text-align: center;
+            font-family: 'loona_font';
+            font-size: 100%;
+            color: #fff;
+            margin-top: 0% ;
+        }
+        
+        #row {
+            
+            height: 175px;
+            text-align: center;
+            margin-top: 1%;
+            display: flex;
+            justify-content: center;
+        
+        }
+        
+        #div_boxleft {
+            width: 175px;
+            height: 175px;
+            margin-right: 1%;
+        }
+        
+        #div_boxcenter {
+            width: 175px;
+            height: 175px;
+            margin-right: 1%;
+        }
+        #div_boxright {
+            width: 175px;
+            height: 175px;
+        }
+        
+        }
+    
+    /* mobile devices */
+    @media screen and (max-width: 480px){
+        
+    
+        @font-face {
+            font-family: loona_font ;
+            src: url('../fonts/210B.ttf');
+        }
+        
+        @font-face {
+            font-family: p_font;
+            src: url('../fonts/Avenir.ttc')
+        }
+        
+        p {
+            color:#fff;
+            text-align: center;
+            font-family: p_font;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: 'loona_font';
+            font-size: 400%;
+            color: #fff;
+            margin-bottom: 0%;
+        }
+        
+        h2 {
+            text-align: center;
+            font-family: 'loona_font';
+            font-size: 100%;
+            color: #fff;
+            margin-top: 0% ;
+        }
+        
+        #row {
+            
+            height: 100px;
+            text-align: center;
+            margin-top: 1%;
+            display: flex;
+            justify-content: center;
+        
+        }
+        
+        #div_boxleft {
+            width: 100px;
+            height: 100px;
+            margin-right: 1%;
+        }
+        
+        #div_boxcenter {
+            width: 100px;
+            height: 100px;
+            margin-right: 1%;
+        }
+        #div_boxright {
+            width: 100px;
+            height: 100px;
+        }
+        
+        }

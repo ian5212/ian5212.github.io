@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>MTA Subway Widget</title>
+
+<style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  h1, h2, h3 {
+    font-family: Roboto;
+    color: #fddc5c;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: IBM-Main;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #ffe4c4;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    filter: brightness(90%);
+  }
+  #menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+    #menuBar {
+      flex-direction: column;
+    }
+    .menu-side a {
+      display: block;
+      margin: 5px 0;
+    }
+    .menu-center img {
+      width: 100px;
+    }
+  }
+</style>
+</head>
+<body class="mainBody">
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="works.html" style="font-family: IBM-Main; font-size: 14px; color: #ffe4c4;">← Back to Works</a>
+      </div>
+    <div>
+        <h1 class="pieceHeaderText">MTA Subway Widget</h1>
+        <p class="appText"> Figma</p>
+    
+        <p class="miniText"> This project was developed as part of NYU’s Ideation and Prototyping course. Tasked with 
+            addressing accessibility gaps in public transit, I conceptualized and designed a widget that enhances the MTA 
+            app’s utility, particularly for users with disabilities and commuters seeking hyperlocal, real-time information.
+        </p>
+    </div>
+    <div class="mainText">
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">Ideation</h2>
+        <p> The original idea began as a full redesign of the MTA app. However, user and stakeholder feedback guided a more 
+            focused direction: creating a standalone widget that would serve users based on their geographic location and deliver 
+            critical, glanceable transit data.
+        </p>
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">Research and Visualization</h2>
+        <p> Before designing, two important aspects needed to occur: application research and rider research.
+        </p>
+        <h3>Application Research</h3>
+        <p>
+            I conducted a competitive review of apps including Train Time, Railway, Subway, Citymapper, and MTA’s native app. This 
+            revealed common pain points such as inconsistent accessibility info and poor live-update performance. These insights 
+            helped shape survey questions and functional priorities.
+        </p>
+        <h3>
+            Rider Research
+        </h3>
+        <p>
+            I surveyed 14 colleged-aged NYC transit riders students to understand their feedback regarding app usage, accessibility needs,
+            and transit completion. The survey gave the following insights:
+        </p>
+            <ul>
+                <li>
+                    Specific asks from the survey: In the bottom section of the survey, a lot of people said that a main 
+                    improvement they want from transit apps were more accurate times/service updates; Someone mentioned 
+                    seeing possible transfer trains/buses would be arriving at the station, clearer lists of where the 
+                    next closest stations are as well as their next train arrival time, seeing specific station with the 
+                    times more easily, a widget, updated formats, etc.
+                </li>
+                <li>
+                    69.2% were not aware of the next ADA compliant station or station that has an elevator via an app, and 
+                    76.9% were not aware of its location via an app                
+                </li>
+                <li>
+                    Most people had a agreeable response to knowing only specific local stations, while an overwhelming 
+                    majority would want to be aware of local train stations and time around their destination.
+                </li>
+                <li>
+                    Most people are comfortable not using a transit app for some to all travel
+                </li>
+            </ul>
+        </p>
+        <p>
+            Participants also provided a list of transit applications they have used to navigate NYC transit.
+        </p>
+        
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">
+            Design 
+        </h2>
+        <p>
+            Over three iterations, I devloped a widget UI emphasizing accessibility, immediacy, and customization.
+            <ul>
+                <li>
+                    Colors indicating how close each train is (5+ minutes away being green, 4-2 minutes away being yellow,
+                    and 1-0 minutes away being red)
+                </li>
+                <li>
+                    The final stop on each train added as some train routes are dependent on the final stop which is not always
+                    the same station
+                </li>
+                <li>
+                    Showcasing the time of the following train afterwards and not only the next train.
+                </li>
+                <li>
+                    A section dedicated for any service updates, rerouting, etc.
+                </li>
+            </ul>
+            The widget was also updated to include the images of the "train bullets" as a visual reminder of which train/line is arriving
+            at the station. Simultaneously, all typography was made to be the same as the MTA standard typography
+            usage (Helvetica). Additionally, an update button was added at the top for the user to be able to update their geographical location
+            if the widget does not automatically refresh.
+        </p>
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">
+            The Product
+        </h2>
+        <div style="text-align: center;">
+            <img src="images/w1.png" style="width: 45%;">
+            <img src="images/w2.png" style="width: 45%;">
+        </div>
+        <h3 style="text-align: center;">
+            <a href="https://www.figma.com/design/yym2Ef9zVTVgCECH6GA3ce/Widget?node-id=5-88&t=X4eL3RB2UBwk6Y2S-1" target="_blank">
+                Figma File</a>
+        </h3>
+        <div class="image-wrapper">
+            <img id="randomImage" src="asters/asters-01.png" alt="Random display image">
+            
+          </div>
+    </div>
+</div>
+
+<script>
+    const images = [
+  'asters/asters-01.png',
+  'asters/asters-02.png',
+  'asters/asters-03.png',
+  'asters/asters-04.png',
+  'asters/asters-05.png',
+  'asters/asters-06.png',
+  'asters/asters-07.png',
+  'asters/asters-08.png'
+];
+
+const imgElement = document.getElementById('randomImage');
+
+const randomIndex = Math.floor(Math.random() * images.length);
+imgElement.src = images[randomIndex];
+
+imgElement.onclick = function(){
+const randomIndex = Math.floor(Math.random() * images.length);
+  imgElement.src = images[randomIndex];
+}
+
+imgElement.onmouseover = function(){
+    imgElement.style.opacity = '90%';
+}
+
+imgElement.onmouseout = function(){
+    imgElement.style.opacity = '100%';
+}
+</script>
+</body>
+</html>

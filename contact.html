@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ian Askie</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+ h1, h2, h3 {
+    font-family: Roboto;
+    color: #fddc5c;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: IBM-Main;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #ffe4c4;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    filter: brightness(90%);
+  }
+  #menuBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* adds spacing between sections */
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+  #menuBar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+  }
+
+  .menu-side a {
+    font-size: 14px;
+  }
+
+  .menu-side {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .menu-center img {
+    height: 30px;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body class="mainBody">
+    <div id="menuBar" role="navigation" aria-label="Main site navigation">
+        <div class="menu-side">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+        </div>
+    
+        <div class="menu-center">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
+    
+        <div class="menu-side">
+          <a href="works.html" >Works</a>
+          <a href="#" style="color:#fddc5c;">Contact</a>
+        </div>
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="divText">
+    <h1> Want to get in touch? Contact me via... </h1>
+    <p>
+        Email: ma6540@nyu.edu
+    </p>
+    <p>
+        Cell: 6094406194
+    </p>
+    <p>
+     <a href="https://drive.google.com/file/d/1QqKnxJ4hSk2AyEsj_aiA58giqQlRAGnV/view?usp=sharing">
+        Resume
+     </a>
+    </p>
+  </div>
+  <div class="image-wrapper">
+    <img id="randomImage" src="images/1.jpg" alt="Random display image">
+    
+  </div>
+
+  <script>
+    const images = [
+      'asters/asters-01.png',
+      'asters/asters-02.png',
+      'asters/asters-03.png',
+      'asters/asters-04.png',
+      'asters/asters-05.png',
+      'asters/asters-06.png',
+      'asters/asters-07.png',
+      'asters/asters-08.png'
+    ];
+
+    const imgElement = document.getElementById('randomImage');
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgElement.src = images[randomIndex];
+
+    imgElement.onclick = function(){
+    const randomIndex = Math.floor(Math.random() * images.length);
+      imgElement.src = images[randomIndex];
+    }
+
+    imgElement.onmouseover = function(){
+        imgElement.style.opacity = '90%';
+    }
+
+    imgElement.onmouseout = function(){
+        imgElement.style.opacity = '100%';
+    }
+  </script>
+</body>
+</html>

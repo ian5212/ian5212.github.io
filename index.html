@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home — Ian Askie</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <style>
+    body {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1, h2, h3 {
+      font-family: Roboto;
+      color: #fddc5c;
+      letter-spacing: 0.5px;
+    }
+    a {
+      color: #ffe4c4;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+    img {
+      transition: all 0.3s ease-in-out;
+    }
+    img:hover {
+      filter: brightness(90%);
+    }
+
+    .image-wrapper {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px auto;
+    }
+
+    .image-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+
+    .intro-text {
+      text-align: center;
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+
+    .intro-text h1 {
+      font-size: 60px;
+      color: #fddc5c;
+      font-family: Roboto;
+      margin-bottom: 10px;
+    }
+
+    .intro-text h2 {
+      font-size: 24px;
+      color: #ffe4c4;
+      font-family: IBM-Main;
+      font-weight: normal;
+    }
+    #menuBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* adds spacing between sections */
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+  #menuBar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+  }
+
+  .menu-side a {
+    font-size: 14px;
+  }
+
+  .menu-side {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .menu-center img {
+    height: 30px;
+  }
+}
+  </style>
+</head>
+<body class="mainBody">
+    <div id="menuBar" role="navigation" aria-label="Main site navigation">
+        <div class="menu-side">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+        </div>
+    
+        <div class="menu-center">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
+    
+        <div class="menu-side">
+          <a href="works.html" >Works</a>
+          <a href="#" style="color:#fddc5c;">Contact</a>
+        </div>
+    </div>
+
+  <main>
+    <section class="intro-text">
+      <h1>M. Ian Askie</h1>
+      <h2>Designer · Creative Technologist · Researcher</h2>
+    </section>
+
+    <div class="image-wrapper">
+      <img id="randomImage" src="images/1.jpg" alt="Portfolio Artwork">
+    </div>
+  </main>
+
+  <script>
+    const images = [
+      'asters/asters-01.png',
+      'asters/asters-02.png',
+      'asters/asters-03.png',
+      'asters/asters-04.png',
+      'asters/asters-05.png',
+      'asters/asters-06.png',
+      'asters/asters-07.png',
+      'asters/asters-08.png'
+    ];
+
+    const imgElement = document.getElementById('randomImage');
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgElement.src = images[randomIndex];
+
+    imgElement.onclick = function() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      imgElement.src = images[randomIndex];
+    }
+
+    imgElement.onmouseover = function() {
+      imgElement.style.opacity = '90%';
+    }
+
+    imgElement.onmouseout = function() {
+      imgElement.style.opacity = '100%';
+    }
+  </script>
+</body>
+</html>

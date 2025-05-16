@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .workDesc {
+            font-family: IBM-Main;
+            font-size: 13px;
+            color: #ccc;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .leadIn {
+            text-align: center;
+            color: #ffe4c4;
+            font-family: Roboto;
+            font-size: 16px;
+            margin: 20px auto 40px;
+            width: 75%;
+        }
+
+        .work-card a {
+            text-decoration: none;
+        }
+
+        .work-card a:hover img {
+            opacity: 0.85;
+        }
+    </style>
+
+<style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  h1, h2, h3 {
+    font-family: Roboto;
+    color: #fddc5c;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: IBM-Main;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #ffe4c4;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    filter: brightness(90%);
+  }
+  #menuBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* adds spacing between sections */
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+  #menuBar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+  }
+
+  .menu-side a {
+    font-size: 14px;
+  }
+
+  .menu-side {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .menu-center img {
+    height: 30px;
+  }
+}
+</style>
+</head>
+<body class="mainBody">
+    <div id="menuBar" role="navigation" aria-label="Main site navigation">
+        <div class="menu-side">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+        </div>
+    
+        <div class="menu-center">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
+    
+        <div class="menu-side">
+          <a href="#" style="color:#fddc5c;">Works</a>
+          <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <p class="leadIn">
+        I design playful, accessible, and research-driven experiences across digital and physical spaces. Below is a selection of my favorite projects.
+    </p>
+
+    <div id="divText">
+        <div class="row">
+          <div class="work-card">
+            <a href="indstudy.html">
+              <img src="images/abso_preview.png" style="width:100%;">
+              <h1>"Anita Bryant Sucks Oranges"</h1>
+            </a>
+            <p class="workDesc">Interactive accessibility prototype using tactile buttons, NFC, and audio to enhance museum experiences for blind visitors.</p>
+          </div>
+          <div class="work-card">
+            <a href="quantum.html">
+              <img src="images/qtitle.png" style="width:100%;">
+              <h1>Quantum 'Cook'puting</h1>
+            </a>
+            <p class="workDesc">A visual cookbook that translates quantum computing concepts through recipes, metaphors, and interactive storytelling.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="work-card">
+            <a href="widget.html">
+              <img src="images/w1.png" style="width:100%;">
+              <h1>MTA Subway Time Widget</h1>
+            </a>
+            <p class="workDesc">Widget prototype for NYC’s MTA that delivers hyperlocal subway info with accessibility-focused UI for all riders.</p>
+          </div>
+          <div class="work-card">
+            <a href="web_dev_portfolio/index.html">
+              <img src="web_dev_portfolio/images/1.png" style="width:100%;">
+              <h1>Web Development Portfolio</h1>
+            </a>
+            <p class="workDesc">Frontend coding work focused on interactivity, accessibility, and design implementation across HTML, CSS, JS projects.</p>
+          </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+
+        <h1 style="text-align: center; color: #fddc5c;">Outer Aster Systems (additional works)</h1>
+    </div>
+</body>
+</html>

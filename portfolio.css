@@ -1,0 +1,138 @@
+
+/*  Fonts */
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/RobotoFlex.ttf');
+  }
+
+  @font-face {
+    font-family: IBM-Main;
+    src: url('fonts/IBMPlexMono-Light.ttf');
+  }
+
+
+/* General CSS */
+
+.mainBody {
+    background-color: #000;
+}
+
+.appText {
+    color: #fddc5c;
+    font-family: IBM-Main;
+    padding-top: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #fff;
+}
+
+.miniText {
+    color: #fff;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.pieceHeaderText {
+color: #fddc5c;
+font-family: Roboto;
+padding-bottom: 0px;
+margin-bottom: 0px;
+text-align: center;
+font-size: 60px;
+
+
+}
+
+.mainText {
+    font-family: IBM-Main;
+    color: #fff;
+    font-size: 14px;
+
+}
+
+div {
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    color: #ffe4c4;
+}
+
+#divText {
+    color: #fddc5c;
+    font-family: IBM-Main;
+    
+    padding-top: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 8px;
+    
+}
+
+
+/* Menu Bar */
+#menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid yellow;
+    
+    /*background-color: #f0f0f0;*/
+  }
+
+  #menuBar a {
+    color:#fff;
+    font-family: IBM-Main;
+  }
+
+  .menu-side {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-center img {
+    height: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+/* Flex-Box */
+
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* spacing between the two items */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+  }
+  
+  .work-card {
+    width: 40%;
+    text-align: center;
+  }
+
+
+
+  .image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .image-wrapper img {
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: contain;
+  }
+  
