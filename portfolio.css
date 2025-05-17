@@ -52,14 +52,18 @@ font-size: 60px;
 
 }
 
-div {
 
-    width: 90%;
-    margin: 0 auto;
-}
 
 a {
-    color: #ffe4c4;
+  color: #ffe4c4;
+  font-family: IBM-Main;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 #divText {
@@ -75,17 +79,37 @@ a {
 
 
 /* Menu Bar */
-#menuBar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 20px;
+
+.menu-container {
+  width: 100%;
+  background-color: #000;
+  border: 1px solid #fddc5c;
 }
+
+#menuBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%; /* 🔑 adjust this to desired spacing */
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
 .menu-side {
   display: flex;
+  width: 100%;
+}
+
+.menu-left {
+  justify-content: flex-start;
   gap: 30px;
-  justify-content: center;
+}
+
+.menu-right {
+  justify-content: flex-end;
+  gap: 30px;
 }
 
 .menu-center {
@@ -93,9 +117,21 @@ a {
   justify-content: center;
 }
 
-.menu-center img {
+#menuBar img {
   height: 40px;
 }
+
+.menu-side a {
+  color: #ffe4c4;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu-side a:hover {
+  text-decoration: underline;
+}
+
 
 @media (max-width: 700px) {
 
@@ -137,5 +173,14 @@ a {
     max-width: 40%;
     max-height: 40%;
     object-fit: contain;
+  }
+
+  body {
+    font-family: IBM-Main, sans-serif;
+    color: #fff;
+    background-color: #000;
+    margin-left: 10% ;
+    margin-right: 10%;
+    padding: 0;
   }
   
