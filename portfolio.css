@@ -83,7 +83,7 @@ a:hover {
 .menu-container {
   width: 100%;
   background-color: #000;
-  border: 1px solid #fddc5c;
+  border-bottom: 1px solid #fddc5c;
 }
 
 #menuBar {
@@ -143,6 +143,7 @@ a:hover {
     height: 20px;
   }
 }
+
 
 /* Flex-Box */
 
