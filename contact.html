@@ -34,54 +34,7 @@ body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
   img:hover {
     filter: brightness(90%);
   }
-  #menuBar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px; /* adds spacing between sections */
-  padding: 10px 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-  .menu-side, .menu-center {
-    margin: 10px;
-    text-align: center;
-  }
-  .menu-side a {
-    margin: 0 10px;
-    display: inline-block;
-    color: #ffe4c4;
-    font-family: IBM-Main;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-  .menu-side a:hover {
-    opacity: 0.8;
-  }
-  .menu-center img {
-    height: 40px;
-  }
-  @media (max-width: 600px) {
-  #menuBar {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 20px;
-  }
-
-  .menu-side a {
-    font-size: 14px;
-  }
-
-  .menu-side {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .menu-center img {
-    height: 30px;
-  }
-}
+  
 
 a:hover {
   text-decoration: underline;
