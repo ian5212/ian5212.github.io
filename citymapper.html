@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Citymapper</title>
+
+<style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  h1, h2, h3 {
+    font-family: Roboto;
+    color: #fddc5c;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: IBM-Main;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #ffe4c4;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    filter: brightness(90%);
+  }
+  #menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+    #menuBar {
+      flex-direction: column;
+    }
+    .menu-side a {
+      display: block;
+      margin: 5px 0;
+    }
+    .menu-center img {
+      width: 100px;
+    }
+  }
+
+  
+</style>
+</head>
+<body class="mainBody">
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="works.html" style="font-family: IBM-Main; font-size: 14px; color: #ffe4c4;">← Back to Works</a>
+      </div>
+    <div>
+        <h1 class="pieceHeaderText">"Citymapper: Understanding Seasoned Riders and Accessibility "</h1>
+        <img src="images/citymapper.png" style="width:50%; margin: auto; display: block;">
+    
+    </div>
+    <div class="mainText">
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">Introduction</h2>
+        <p> As a (somewhat) New Yorker, I always tell stories about my ventures through 42nd St. Times-Square, one of the largest stations in NYC that makes it feel as though you will walk for miles if you don’t take the right train line. 
+            For context: Times Square 42nd St. has 9 subway services running at the station. For a new New Yorker, you would probably take any of the 9 lines to get to your location, not realizing that the specific location you want to arrive at may be around half a mile away from the subway line you took. For a experienced New Yorker, you understand that depending on which line you take will put you closer to the location you want to be at.
+            However, the comment I always say to myself when navigating this station, or any subway station is, “as an able-bodied person, this is super frustrating.” For those with physical disabilities and needed accommodations, not landing at the correct spot in large “accessible” stations like these are likely to be worse. This is where technology has the opportunity to improve the lives of others.
+            
+        </p>
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">Citymapper: A Giant in Understanding Users</h2>
+        <p> Citymapper is a transit app known for its usage solely in major cities and its accuracy and user-friendliness in 
+            navigating transportation in those cities. As someone who has spent the last couple of years in NYC, 
+            citymapper has become a friend of mine, where I almost exclusively use it to plan travels. 
+        </p>
+        <p>
+            Why this specific app is so loved boils down to several things that New Yorkers need while navigating the subway system:
+            <ul>
+                <li>
+                    An issues tab that explains daily service dealys, reroutes, or disruptions.
+                </li>
+                <li>
+                    Citi Bike integration showing availbility and rack locations.
+                </li>
+                <li>
+                    Calendar syncing so destinations pre-load from your schedule.
+                </li>
+                <li>
+                    Geolocation that auto-locates nearby subway entrances and routes.
+                </li>
+            </ul>
+            For someone navigating New York, whether it’s the first time or the 2,000th time, these features are essential for your day to day travels, and citymapper integrates all of these throughout your entire usage. The app is also a champion in other areas including: 
+            <ul>
+                <li>
+                    "Get Me Home", "Work", and "Saved Places" buttons for quick navigation.
+                </li>
+                <li>
+                    Travel stats tracking money saved and steps taken.
+                </li>
+                <li>
+                    User-customization for both app and navigator icon (mine is a star!).
+                </li>
+            </ul>
+        </p>
+        <p>
+            Most importantly, Citymapper offers something competitors like Google Maps, Apple Maps, and even the MTA app do not: Step-Free routing. This
+            feature helps users to avoid stair sby selecting accessible stations and routes.
+            <br>
+            <br>
+            So what's missing?
+        </p>
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">
+            NYC Ridership Research & User Research
+        </h2>
+        <p>
+            To better understand New York Citmapper users, we need to look at how New Yorkers navigate the city, as well as the realities they face.
+            Most rsidents tend to rely on a familiar set of subway lines, stations, and bus routes. In fact, in a survey conducted on NYC riding habits
+            and accessibility (n=14), nearly 60% of survey participants said they often travel without using a transit app at all.
+            <br>
+            <br>
+            While the subway system is vast, only about 30% of its stations are ADA-compliant. This makes trip planning signifcantly more comples for people
+            with mobility needs. Additioanlly, 64% of survey respondents said they were unaware of where the next accessible subway station is when using a transit app.
+            <br>
+            <br>
+            Riders who are in need of accessibility information face a system of inconsistency. On older R62 trains, there is no visual map, forcing riders to memorize stations 
+            or hope for a conductor announcement. On R142 trains, riders can see icons for accessible stops, but they do not indicate which exit has the elevator. Only on newer
+            R211 trains are full exit layouts and accessible features displayed, but still not integrated into mobile applications.
+            <br>
+            <br>
+            While that helps for exiting, getting in proves to be a harder challenge. Clear signage for accessible entrance may be difficult for riders to encounter. Clear take always
+            from the research conducted are: 
+            <ul>
+                <li>
+                    Travelers don't want to reroute everytime they want to navigate somewhere.
+                </li>
+                <li>
+                    More information on accessibility is needed for traveling.
+                </li>
+            </ul>
+            Following this, we built the final prototype using Figma, Photoshop, and Illustrator focusing on visual clarity,
+            consistency, and engagement.
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">
+            Design & Solutions
+        </h2>
+        <p>
+            Citymapper already leads in multi-modal transit integration, but with thoughtful improvements, it can better serve riders
+            who need to plan entr/exit with accessibility in mind, seasoned New Yorkers who want to customize their core routes, and anyone looking
+            for quick, glanceable subway information. Proposed solutions include:
+            <ul>
+                <li>
+                    A widget for local lines: A home screen widget allows at-a-glance updates for lines local to the users current location.
+                    It's designed to be minimal and non intrusive, ideal for routine travel without launching the app. The design and process 
+                    can be seen <a href="widget.html">here</a>.
+                </li>
+                <li>
+                    Home Screen Favorites Button: Add a toggle for Favorite Station(s) that enables users to view real-time arrival times without having
+                    to re-enter trip details.
+                </li>
+                <li>
+                    Accessile Station Indicators: Citymapper's map and subway mode should show icons denoting accessible stations. No route input required, users
+                    can scan visually for the best entry points.
+                </li>
+                <li>
+                    Elevator Status Integration: Live data from the MTA's elevator API would inidcate outages or delays in elevaator access. These alerts would appear alongisde routing
+                    and station metadata.
+                </li>
+            </ul>
+            <img src="images/wireframe_citymapper.png" style="width: 99%;">
+        </p>
+        <h2>
+            Reflections & Next Steps
+        </h2>
+        <p>
+            These additions build on Citymapper’s solid foundation. They don’t reinvent the product, they refine it to support more users, more inclusively.
+
+            Through testing and collaboration with inclusive transit organizations and the MTA, these improvements can be implemented and scaled across other cities.
+
+            Citymapper is already loved by its users. These enhancements help ensure that love extends to every rider,  including those who navigate New York’s subways with physical constraints or everyday fatigue.
+
+            By designing with accessibility in mind from the outset, we create transit tools that are not just functional, but fair, human-centered, and future-ready.
+
+        </p>
+        
+        <div class="image-wrapper">
+            <img id="randomImage" src="asters/asters-01.png" alt="Random display image">
+            
+          </div>
+    </div>
+    </div>
+
+    <script>
+        const images = [
+      'asters/asters-01.png',
+      'asters/asters-02.png',
+      'asters/asters-03.png',
+      'asters/asters-04.png',
+      'asters/asters-05.png',
+      'asters/asters-06.png',
+      'asters/asters-07.png',
+      'asters/asters-08.png'
+    ];
+
+    const imgElement = document.getElementById('randomImage');
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgElement.src = images[randomIndex];
+
+    imgElement.onclick = function(){
+    const randomIndex = Math.floor(Math.random() * images.length);
+      imgElement.src = images[randomIndex];
+    }
+
+    imgElement.onmouseover = function(){
+        imgElement.style.opacity = '90%';
+    }
+
+    imgElement.onmouseout = function(){
+        imgElement.style.opacity = '100%';
+    }
+    </script>
+</body>
+</html>
