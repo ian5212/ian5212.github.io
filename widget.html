@@ -99,17 +99,17 @@ body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
         <h2 style="text-align: center; color:#fddcbc;">Research and Visualization</h2>
         <p> Before designing, two important aspects needed to occur: application research and rider research.
         </p>
-        <h3>Application Research</h3>
+        <h3>Competitve Analysis</h3>
         <p>
             I conducted a competitive review of apps including Train Time, Railway, Subway, Citymapper, and MTA’s native app. This 
             revealed common pain points such as inconsistent accessibility info and poor live-update performance. These insights 
             helped shape survey questions and functional priorities.
         </p>
         <h3>
-            Rider Research
+            User Insights
         </h3>
         <p>
-            I surveyed 14 colleged-aged NYC transit riders students to understand their feedback regarding app usage, accessibility needs,
+            I surveyed 14 college-aged NYC transit riders to understand their feedback regarding app usage, accessibility needs,
             and transit completion. The survey gave the following insights:
         </p>
             <ul>
@@ -125,7 +125,7 @@ body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
                     76.9% were not aware of its location via an app                
                 </li>
                 <li>
-                    Most people had a agreeable response to knowing only specific local stations, while an overwhelming 
+                    Most people had an agreeable response to knowing only specific local stations, while an overwhelming 
                     majority would want to be aware of local train stations and time around their destination.
                 </li>
                 <li>
@@ -143,28 +143,24 @@ body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
             Design 
         </h2>
         <p>
-            Over three iterations, I devloped a widget UI emphasizing accessibility, immediacy, and customization.
-            <ul>
-                <li>
-                    Colors indicating how close each train is (5+ minutes away being green, 4-2 minutes away being yellow,
-                    and 1-0 minutes away being red)
-                </li>
-                <li>
-                    The final stop on each train added as some train routes are dependent on the final stop which is not always
-                    the same station
-                </li>
-                <li>
-                    Showcasing the time of the following train afterwards and not only the next train.
-                </li>
-                <li>
-                    A section dedicated for any service updates, rerouting, etc.
-                </li>
-            </ul>
-            The widget was also updated to include the images of the "train bullets" as a visual reminder of which train/line is arriving
-            at the station. Simultaneously, all typography was made to be the same as the MTA standard typography
-            usage (Helvetica). Additionally, an update button was added at the top for the user to be able to update their geographical location
-            if the widget does not automatically refresh.
-        </p>
+          Over multiple iterations, I prototyped a widget UI design to simulate how users would interact with nearby station data based 
+          on geolocation. To inform the design beyond assumptions, I conducted informal usability feedback sessions with 3 regular transit riders 
+          prior to the final design. The prototypes were tested in two major NYU locations — the Paulson Center and 370 Jay St. — and users gave feedback on the widget’s usefulness, the clarity of local station listings, and the value of including a service status bar.
+          </p>
+          
+          <ul>
+            <li>The widget's simplicity resonated with users who wanted quick, glanceable information without launching a full app</li>
+            <li>One user noted it wasn’t immediately clear which subway station’s information was being shown</li>
+            <li>Several suggested showing the time of the following train in addition to the upcoming train</li>
+            <li>Readability and color contrast issues were flagged, raising WCAG accessibility concerns</li>
+          </ul>
+          
+          <p>
+          Based on this feedback, I implemented several refinements: improving the visual identity and alignment with MTA branding, 
+          adding an "Update" button to allow users to manually refresh their location data, and making the service status bar more prominent. 
+          This iterative feedback helped shape a UI that is scannable, accessible, and transit-appropriate for real-time decision-making.
+          </p>
+          
     </div>
     <div>
         <h2 style="text-align: center; color:#fddcbc;">
