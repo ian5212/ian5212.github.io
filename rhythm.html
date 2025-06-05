@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Rhythmic Rush</title>
+
+<style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  h1, h2, h3 {
+    font-family: Roboto;
+    color: #fddc5c;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: IBM-Main;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #ffe4c4;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    filter: brightness(90%);
+  }
+  #menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+    #menuBar {
+      flex-direction: column;
+    }
+    .menu-side a {
+      display: block;
+      margin: 5px 0;
+    }
+    .menu-center img {
+      width: 100px;
+    }
+  }
+
+  
+</style>
+</head>
+<body class="mainBody">
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="works.html" style="font-family: IBM-Main; font-size: 14px; color: #ffe4c4;">← Back to Works</a>
+      </div>
+    <div>
+        <h1 class="pieceHeaderText">Rhythmic Rush</h1>
+        <p class="appText"> Role: Physical Designer & Engineer <br> Tools: Illustrator, JavaScript</p>
+        <img src="images/RHYTHMIC RUSH (3).png" style="width:45%; margin: auto; display: block;">
+    
+        <p class="miniText"> A tactile, arcade-style controller designed for a rhythm game using Makey Makey and laser-cut
+             acrylic. I explored multiple physical interface concepts before developing a fully functional button matrix with 
+             custom wiring, game-matched visuals, and a transparent housing to showcase the internal circuitry. This project focused 
+             on playful interaction design, hardware prototyping, and responsive physical UX.
+        </p>
+    </div>
+    <div class="mainText">
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">Ideation</h2>
+        <p> When approaching the physical interface for the rhythm game, I explored a range of interactive concepts—some playful, some ambitious, 
+            all with different technical and user interaction implications.
+        </p>
+        <ul>
+            <li>
+                Toy Guitar: <br>
+                    I considered repurposing a toy guitar, leveraging its natural hand placement and playful form. The idea was to create touch-sensitive fret regions to act 
+                    as gameplay inputs, offering a familiar and fun interaction model.
+            </li>
+            <li>
+                Mini Piano Keys: <br>
+                A four-key piano setup was another early direction. I explored the possibility of 3D printing the keys and using conductive materials like aluminum foil 
+                or play-doh to register touch with an Arduino board. This path offered creative flexibility but would require more time for prototyping and tuning responsiveness.
+            </li>
+            <li>
+                Drawing Tablet (OSU! Inspired): <br>
+                Drawing inspiration from OSU, I considered recreating a DIY drawing tablet to allow users to control cursor motion. While exciting, this direction presented 
+                challenges in replicating real-time responsiveness and accuracy with the resources available.
+            </li>
+            <li>
+                Simple Button Matrix: <br>
+                Ultimately, I decided on building a custom button matrix, a tactile and straightforward interface that would prioritize responsiveness and physicality. It provided
+                the best balance between feasibility, functionality, and room for design customization.
+            </li>
+        </ul>
+        <p>
+            The final interface goals were to prioritize four main game input butons, explore potential additions if time allows (ie volume control, back button, etc.),
+            and design for both usability and aesthetic appeal.
+        </p>
+        <img src="images/rhythm_images/paper.jpeg" style="width:60%;">
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">Process</h2>
+        <h3>Hardware and Wiring</h3>
+        <p> The core interaction relied on mapping physical button presses to keyboard inputs using a Makey Makey board. However, I quickly ran into a technical hiccup: 
+            while most tutorials used 2-pin buttons, I was working with 4-pin hardware. After researching how the current flows through 4-pin setups, I manually mapped each 
+            button to the Makey Makey using jumper cables and alligator clips. I carefully identified vertical pin pairings (not horizontal), connected each button's input and grounded
+            pin accordingly, and considered daisy-chaining grounds to save wiring but found it unfeasible for this configuration. Despite the limitation, I successfully configured all intended
+            buttons, ensuring the key inputs for the gameplay were functional and responsive.
+        </p>
+        <img src="images/rhythm_images/wiring.jpeg" style="width:60%;">
+        <h3>Enclosure and Visual Design</h3>
+        <p>
+            To make the interface feel cohesive and user-friendly, I designed a custom enclosure using clear and colored laser-cut acrylic. I wanted to showcase the internal 
+            circuitry while maintaining a playful, arcade-like aesthetic.
+            <ul>
+                <li>
+                    Created box layout and cut guides in Illustrator.
+                </li>
+                <li>
+                    Sourced available acrylic in four colors corresponding to in-game visuals.
+                </li>
+                <li>
+                   Designed each button to match the game's UI using the colored acrylic.
+                </li>
+                <li>
+                    Engraved the game's logo on the front-facing panel.
+                </li>
+            </ul>
+            I chose to glue the box pieces together rather than using joints, aiming for a smooth seamless finish.
+        </p>
+        <img src="images/rhythm_images/assembly3.jpeg" style="width:20%;">
+        <img src="images/rhythm_images/assembly4.jpeg" style="width:20%;">
+        <img src="images/rhythm_images/design1.jpeg" style="width:20%;">
+        <img src="images/rhythm_images/design2.jpeg" style="width:20%;">
+        <h3>Assembly</h3>
+        <p>
+            For the button mounting, I laser-cut cardboard stacks using a Cricut to ensure 
+            perfect alignment and spacing. Initially, the buttons would sink when pressed, disrupting play. To fix this, I
+            taped the buttons to stabilize their position, reduced the number of stacked layers for optimal responsiiveness,
+            and adjusted button cap sizes to better fit the top plate.
+            <br>
+            After discovering that the buttons stuck out too far from the box top, I added extra acrylic layers to increase surface height.
+        </p>
+        <img src="images/rhythm_images/assembly1.jpeg" style="width:30%;">
+        <img src="images/rhythm_images/assembly2.jpeg" style="width:30%;">
+        <img src="images/rhythm_images/final1.jpeg" style="width:30%;">
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">
+            Testing
+        </h2>
+        <p>
+            During final testing, button caps occasionally slipped under their holes due to lack of rigidity. While it 
+            functioned well with controlled pressing, I proposed several improvements for broader usability:
+            <ul>
+                <li>
+                    Adding paper walls around each button hole.
+                </li>
+                <li>
+                    Taping the caps to the actual buttons for fixed alignment
+                </li>
+                <li>
+                    Reinforcing cap structure with additional base materials.
+                </li>
+            </ul>
+            Although not implemented in the final prototype, these adjustments would be essential for real-world 
+            use and user playtesting.
+    </div>
+    <div>
+        <h2 style="text-align: center; color:#fddcbc;">
+            The Product (Prototype Walkthrough)
+        </h2>
+        <div style="text-align: center;">
+            <video width="100%"; controls>
+                <source src="images/Rhythmic_Rush_Final.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h3 style="text-align: center;">
+            <a href="https://docs.google.com/presentation/d/1l3Fp-pYhChiw2t7NFgi0ZcKdYI6GXEqSqgzR0Rzj1Jw/edit?usp=sharing" target="_blank">
+                Link to presentation slides </a>
+        </h3>
+        <div class="image-wrapper">
+            <img id="randomImage" src="asters/asters-01.png" alt="Random display image">
+            
+          </div>
+    </div>
+    </div>
+
+    <script>
+        const images = [
+      'asters/asters-01.png',
+      'asters/asters-02.png',
+      'asters/asters-03.png',
+      'asters/asters-04.png',
+      'asters/asters-05.png',
+      'asters/asters-06.png',
+      'asters/asters-07.png',
+      'asters/asters-08.png'
+    ];
+
+    const imgElement = document.getElementById('randomImage');
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgElement.src = images[randomIndex];
+
+    imgElement.onclick = function(){
+    const randomIndex = Math.floor(Math.random() * images.length);
+      imgElement.src = images[randomIndex];
+    }
+
+    imgElement.onmouseover = function(){
+        imgElement.style.opacity = '90%';
+    }
+
+    imgElement.onmouseout = function(){
+        imgElement.style.opacity = '100%';
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>A (L)etter</title>
+
+<style>
+body { opacity: 0; animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  h1, h2, h3 {
+    font-family: Roboto;
+    color: #fddc5c;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-family: IBM-Main;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #ffe4c4;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
+  img:hover {
+    filter: brightness(90%);
+  }
+  #menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .menu-side, .menu-center {
+    margin: 10px;
+    text-align: center;
+  }
+  .menu-side a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #ffe4c4;
+    font-family: IBM-Main;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .menu-side a:hover {
+    opacity: 0.8;
+  }
+  .menu-center img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+    #menuBar {
+      flex-direction: column;
+    }
+    .menu-side a {
+      display: block;
+      margin: 5px 0;
+    }
+    .menu-center img {
+      width: 100px;
+    }
+  }
+  .centered-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  
+</style>
+</head>
+<body class="mainBody">
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="works.html" style="font-family: IBM-Main; font-size: 14px; color: #ffe4c4;">← Back to Works</a>
+      </div>
+    <div>
+        <h1 class="pieceHeaderText">"A (L)etter"</h1>
+        <p class="appText"> Role: Designer <br> Tools: Illustrator, Audacity, Javascript</p>
+        
+    
+        <p class="miniText"> Interactive Art Piece
+        </p>
+    </div>
+    <div class="mainText">
+    
+    <div>
+        <iframe src="https://editor.p5js.org/ian5212/full/C1xQwGEKI" style="width: 800px; height: 600px;"></iframe>
+    </div>
+    <div>
+        <p> 
+            For this project, I designed several original graphics in Illustrator and experimented with multiple sprite sheets, many of which I ended up not using as the direction evolved. I also wrote a short accompanying narrative piece to deepen the emotional tone of the experience. One of the biggest technical challenges was creating smooth transitions between four different sky graphics to represent the passage of time. After some trial and error, I developed a fading system that made the transitions work visually and rhythmically.
+<br>
+Once that was in place, I began layering additional elements, including the fading of the moon and sun, and animating falling “petals” from the tree to enhance the atmosphere. Midway through, I edited the background audio in Audacity, downsampling it to 8000 Hz to give it a slightly pixelated, lo-fi texture that matched the visual style.
+<br>
+At the bottom of the scene, I added a riddle prompt that invites the user to guess a letter. When the correct letter is pressed, a second character appears beside the main figure—quietly watching the changing sky together. Initially, I had hoped to animate this second figure fading in gradually. However, due to the layered fading system already in place for other objects, I ran into some constraints, and the figure currently appears more suddenly. While not exactly what I intended, it still captures the emotional beat of the moment.
+<br>
+Overall, the process was filled with experimentation—balancing visual storytelling, sound design, and interactivity in a way that felt poetic and personal.
+        </p>
+    </div>
+        <div class="image-wrapper">
+            <img id="randomImage" src="asters/asters-01.png" alt="Random display image">
+            
+          </div>
+    </div>
+    </div>
+
+    <script>
+        const images = [
+      'asters/asters-01.png',
+      'asters/asters-02.png',
+      'asters/asters-03.png',
+      'asters/asters-04.png',
+      'asters/asters-05.png',
+      'asters/asters-06.png',
+      'asters/asters-07.png',
+      'asters/asters-08.png'
+    ];
+
+    const imgElement = document.getElementById('randomImage');
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    imgElement.src = images[randomIndex];
+
+    imgElement.onclick = function(){
+    const randomIndex = Math.floor(Math.random() * images.length);
+      imgElement.src = images[randomIndex];
+    }
+
+    imgElement.onmouseover = function(){
+        imgElement.style.opacity = '90%';
+    }
+
+    imgElement.onmouseout = function(){
+        imgElement.style.opacity = '100%';
+    }
+    </script>
+</body>
+</html>
