@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NJ Transit Redesign</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <style>
+        body {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, h2, h3 {
+            font-family: Roboto;
+            color: #fddc5c;
+            letter-spacing: 0.5px;
+        }
+        p {
+            font-family: IBM-Main;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #ffe4c4;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        .tab-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .tab-buttons button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            font-family: Roboto;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            background-color: #333;
+            color: #fddc5c;
+            border-radius: 5px;
+        }
+        .tab-buttons button:hover {
+            background-color: #444;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            padding: 6px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            color: #ffe4c4;
+        }
+        th {
+            background-color: #333;
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="mainBody">
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="works.html" style="font-family: IBM-Main; font-size: 14px; color: #ffe4c4;">&larr; Back to Works</a>
+    </div>
+
+    <h1 class="pieceHeaderText" style="text-align: center;">Reimagining NJ Transit’s Digital Experience</h1>
+    <img src="images/NJT_logo.svg.png" style="width:50%; margin: auto; display: block;" alt="NJ Transit Redesign">
+
+    <div class="tab-buttons">
+        <button onclick="showSection('case')">Case Study</button>
+        <button onclick="showSection('design')">Design</button>
+    </div>
+
+    <div id="case" style="display: block;">
+        <h2 style="text-align: center; color:#fddcbc;">Introduction & Project Overview</h2>
+        <p>I was invited to a friend’s in NYC, and as someone who lives in South Jersey, 
+            I considered public transportation over a two-hour drive. Using the NJ Transit 
+            app, I planned a multi-step journey across systems. While it helped, there were 
+            consistent frictions. This project explores how NJ Transit’s digital presence could 
+            be reimagined through competitive research, user feedback, and a design process to 
+            serve all travelers better. A slideshow summarizing the findings below can be found <a href="https://www.figma.com/slides/Qav76nJE7nNdLD7JEt3Fh2/NJ-Transit-Presentation?node-id=1-42&t=OC9PtD3Qh6RhnaoW-1">here</a>.</p>
+
+           
+
+        <h2 style="text-align: center; color:#fddcbc;">Market Research & Benchmarking</h2>
+        <p>To better understand what could be added, changed, removed, or kept the same, I conducted 
+            a thorough research on 6 apps (MTA App, Ventra, EL Tracker, ProximiT, SEPTA, and Transit). 
+            The apps are a mix of applications made directly from their respective transit authority, 
+            third party applications for a specific transit system, and a all-around application used 
+            for any transit system. I collected an understanding of the user flow, features, buying process, 
+            accessibility in both navigation and app usage, preferences, ease of planning trips, design concerns, 
+            feedback and praises, and overall user experience. Below is a chart showcasing the findings in each app:</p>
+       <table>
+            <tr>
+                <th>
+                    App
+                </th>
+                <th>
+                    Features
+                </th>
+                <th>
+                    Benefits
+                </th>
+                <th>
+                    Feedback
+                </th>
+                <th>
+                    Accessibility
+                </th>
+                <th>
+                    Ease of Planning Trip
+                </th>
+                <th>
+                    UX Tone
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    MTA
+                </td>
+                <td>
+                    Alerts, Map, Account/Profile, Schedules/Arrivals, Trip Planning
+                </td>
+                <td>
+                    Good improvements from previous app (app store);
+Visually is better than previous app (app store);
+
+                </td>
+                <td>
+                    Leaves out the most logical routing possible creating inaccessible routes (reddit);
+Train information is not always accurate (reddit);
+No way to store addresses (ie home or work) instead of favorite routes (reddit);
+Train disruptions - Scroll throw each in individual rows instead of grouping them together (reddit);
+Buses are not shown on route (ie if a bus is dealyed you can't see that based on "the bus is at the next stop" because it could be there for 1 or 20 minutes) (app store);
+Bus info (app store);
+Clunky (app store);
+Widget (app store);
+Can't buy tickets Metro North or LIRR tickets (app store);
+
+                </td>
+                <td>
+                    N/A
+                </td>
+                <td>
+                    9
+                </td>
+                <td>
+                    Functional
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Ventra
+                </td>
+                <td>
+                    Alerts, Map, Account/Profile, Schedules/Arrivals, Ticketing
+                </td>
+                <td>
+                    Easy to use (app store);
+All in one app (see schedule, purchase tickets, etc.) (app store);
+                </td>
+                <td>
+                    Bus inaccuracy (reddit);
+Metra purchase button is too low on the screen (app store);
+You can't remove favorites (app store);
+Long time to create an account and receive tickets (app store);
+Inaccessible (app store);
+Not intuitive (app store);
+                </td>
+                <td>
+                    Overall the CTA is not the best. The VoiceOver actually sounds human like and gives you a information in a sentence form unlike the MTA app.
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    Professional
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    EL Tracker
+                </td>
+                <td>
+                    Alerts, Map
+                </td>
+                <td>
+                    Live train/Bus Map (reddit);
+                    Clean and Organized (app store);
+                    Widgets (app store);
+                    Bus tracking (app store);                     
+                </td>
+                <td>
+                    Bugs here and there (app store/reddit);
+                </td>
+                <td>
+                    VoiceOver doesn't work the best on the app as it is solely reading the text. Additionally, the color contrast is good, but once again, color blind users will have a hard time navigating this.  
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    Friendly
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ProximiT
+                </td>
+                <td>
+                    Schedules/Arrivals, Alerts, Map, Ticketing
+                </td>
+                <td>
+                    Live times for trains and buses (reddit);
+Exact timing of trains (app store);
+Good for low vision individuals (app store);
+Very accurate (app store);
+                </td>
+                <td>
+                    Update lines (app store);
+Inaccurate train times (app store);
+Weather advisory/service issues (updating the app) (app store);
+                </td>
+                <td>
+                    VoiceOver reads whats on the screen (no metadata). May not be helpful for low vision users. Color contrast is god otherwise, but should be able to switch between light and dark mode
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    Functional
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    SEPTA
+                </td>
+                <td>
+                    Alerts, Map, Account/Profile, Schedules/Arrivals, Trip Planning
+                </td>
+                <td>
+                    Train Numbers displayed everywhere (app store);
+Many like the new update (app store);
+                </td>
+                <td>
+                    Only realtime information (no original scheduled time/delays) - no "arriving in" function (reddit);
+Accuracy (reddit);
+No Widgets or platform features (reddit);
+Load SEPTA card in Apple Wallet (reddit);
+Clunky interface (app store);
+UX concerns (app store);
+                </td>
+                <td>
+                    VoiceOver only shows what is on screen with no additional metadata sadly.
+                </td>
+                <td>
+                    9
+                </td>
+                <td>
+                    Friendly
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Transit
+                </td>
+                <td>
+                    Account/Profile, Alerts, Map, Ticketing
+                </td>
+                <td>
+                    Integrates across various areas including non major areas (reddit);
+Bus accuracy (reddit);
+Open Source API (reddit);
+Apple watch integration (reddit);
+                </td>
+                <td>
+                    Paywall (reddit);
+No Timetables (app store);
+Ghost buses (app store);
+                </td>
+                <td>
+                    Color contrast is not the best for glanceability/scanning
+                </td>
+                <td>
+                    10
+                </td>
+                <td>
+                    Friendly
+                </td>
+            </tr>
+        </table>
+        <p>
+            Based on the market research on mobile apps, users shared that the following are helpful in a transit app: trip planning (having a clear trip planning function including in-app GPS), real-time maps and arrival data, alerts and notifications (especially for service changes, platform arrivals, etc.), in-app ticket purchasing, account & profile management (saving favorite stations, lines, address, and travel information), accessibility support, compatibility with widgets and smart watches, UI clutter, planning flows, and information inaccuracy.
+        </p>
+        <p>
+            Additonally, I compared the MTA webpage with NJ Transit's to see what could be changed.
+        </p>
+        <table>
+            <tr>
+                <th>
+                    Dimension
+                </th>
+                <th>
+                    MTA Strengths
+                </th>
+                <th>
+                    NJ Transit Gaps
+                </th>
+                <th>
+                    Design Opportunity
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Navigation
+                </th>
+                <td>
+                    Mode-specific, clear
+                </td>
+                <td>
+                    Broad, cluttered, news-heavy
+                </td>
+                <td>
+                    Add mode-segmentation, trim non-essential items
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Real-Time Info
+                </th>
+                <td>
+                    Interactive maps, live data
+                </td>
+                <td>
+                    No real-time info, outdated trip planning
+                </td>
+                <td>
+                    Build live tracking, real-time arrival interface
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Mobile UX
+                </th>
+                <td>
+                    Responsive, polished
+                </td>
+                <td>
+                    Non-responsive, outdata
+                </td>
+                <td>
+                    Optimize for mobile-frist, responsive design
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Communication
+                </th>
+                <td>
+                    Service alerts, public radar map
+                </td>
+                <td>
+                    Poor alerts, limited communication
+                </td>
+                <td>
+                    Integrate alerts and disruption messaging functionality
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Visual Design
+                </th>
+                <td>
+                    Clean, modern, accessible
+                </td>
+                <td>
+                    Cluttered and outdata
+                </td>
+                <td>
+                    Refresh brand styling and accessibility
+                </td>
+            </tr>
+        </table>
+
+        <h2 style="text-align: center; color:#fddcbc;">User Research</h2>
+        <p>Based on a survey of NJ Transit users, I gathered data on their behaviors and frustrations with the app. Users mainly highlighted that
+            <ul>
+                <li>
+                    Several features were frustrating including push notificaitons, desnity accuracy, trip planning layout, outdata navigation, and rough UI.
+                </li>
+                <li>
+                    The app seems to be overwhelming and redundant.
+                </li>
+                <li>
+                    Most users abandon the app mid-journey.
+                </li>
+            </ul>
+            Users wanted to see more intuitive navigation, more usage of notifications, possible SMS alerts, adding DepartureVision screens and announcements for every station, and 
+            more transparency on delays.
+        </p>
+
+        <h2 style="text-align: center; color:#fddcbc;">Opportunities for Improvement</h2>
+        <h3>Current State Analysis</h3>
+        <p>
+            The current NJ Transit app offers a wide range of features, but delivers them through a fragmented and inconsistent experience. The home screen leads with promotional content and presents the user with a long list of options including ticket purchasing, DepartureVision (real-time train departures), MyBus, My LightRail, schedules, trip planner, and rider tools. Ticket purchasing is generally functional, with options to buy rail, bus, and light rail tickets and view past purchases, but requires account creation, which frustrates many users. DepartureVision provides useful train tracking, capacity information, and map integration, but lacks real-time auto-refresh and can be cumbersome to navigate. MyBus and My LightRail flows are difficult to use, with long station lists and unclear navigation paths. The trip planner is limited, offering basic routing with some accessible options, but lacking clear guidance or real-time adjustments.
+            <br>
+            <br>Design-wise, the app maintains decent visual hierarchy and consistent iconography, but feels outdated and clunky overall. The color system and typography are serviceable but uninspired. Information density is a major pain point; key content is scattered across redundant pathways, making navigation confusing and overwhelming. Users report frequent friction in planning trips and finding information, especially for buses and light rail. Common complaints include the required account creation, lack of Spanish language support, inaccurate zoning info, missing platform details for light rail, poor trip tracking, and lack of actionable alerts. Users also request better DepartureVision functionality, more robust bus information, clear transfer guidance, and improved push notifications for real-time events.
+            <br>
+            <br>Compared to other transit apps analyzed in this study, the NJ Transit app lags behind in several key areas. Apps like MTA and SEPTA offer more intuitive trip planning and real-time tracking experiences, with stronger mobile responsiveness and clearer information hierarchies. Competitors often provide home screen widgets, customizable alerts, and better integrated maps, which NJ Transit currently lacks. While NJ Transit’s ticketing flow is functional, the broader navigation and content structure do not match the clarity and polish seen in the best apps in this space. Moreover, accessibility options remain basic, whereas top apps offer stronger language support and more inclusive design patterns. Overall, the NJ Transit app demonstrates functional breadth but suffers from poor usability, outdated design, and critical gaps in real-time communication and accessibility, presenting a clear opportunity for a modern, user-centered redesign.
+        </p>
+        <h3>Summary of Improvements</h3>
+        <p>
+            <ul>
+                <li>Visual redesign and improved information hierarchy.</li>
+                <li>Widget and smartwatch compatibility.</li>
+                <li>Accessibility enhancements including screen reader support and scalable fonts.</li>
+                <li>Modular homepage with live service cards.</li>
+                <li>Post-trip feedback and better history tracking.</li>
+            </ul>
+        </p>
+        <p> To find the full Case Study, click <a href="https://docs.google.com/document/d/1R6WEFN061jJ6xwLL0NDjAGXu_p1dl5KkDI7P7sx8Kbc/edit?usp=sharing">here</a>.</p>
+    </div>
+
+    <div id="design" style="display: none;">
+        <h2 style="text-align: center; color:#fddcbc;">Design Brief</h2>
+        <p>
+            Below is a summary of the design brief. The full design brief can be found <a href="https://docs.google.com/document/d/1M-eEhZkz0sVKny7uMXDF9g36bjKdoxLdzoVPuRsYuQ4/edit?usp=sharing">here</a>.
+        </p>
+        <hr>
+        <p>
+            Project Summary: Full-scale redesign of NJ Transit’s app and site to modernize UI, improve usability, and enhance access for all users.<br>
+            Target Audience: Commuters, first-time riders, accessibility-focused users, and multi-modal travelers.<br>
+            Key Goals:
+            <ul>
+                <li>Improve trip planning, real-time info, and UI hierarchy</li>
+                <li>Add accessibility features including color contrast, scalable fonts, and screen reader compatibility</li>
+                <li>Make account creation optional</li>
+            </ul>
+        </p>
+
+        <h2 style="text-align: center; color:#fddcbc;">Design Process</h2>
+        <p>The redesign included:
+            <ul>
+                <li>Wireframing and flow restructuring</li>
+                <li>Building prototypes for homepage cards, alerts, and trip planners</li>
+                <li>Establishing a modern visual style with friendly tone and reduced clutter</li>
+                <li>Iterative testing and revision based on user feedback</li>
+            </ul>
+        </p>
+
+        <h2 style="text-align: center; color:#fddcbc;">Final Outcome (In Progress)</h2>
+        <p>The final design includes a responsive homepage, trip planner with live data, simplified ticketing, and customizable widgets. The UI is accessible, responsive, and user-friendly, aligned with NJ Transit’s vision of inclusivity and reliability.</p>
+
+        <div class="image-wrapper">
+            <img id="randomImage" src="asters/asters-01.png" alt="Random display image" style="width: 100%;" />
+        </div>
+    </div>
+
+    <script>
+        function showSection(section) {
+            document.getElementById('case').style.display = section === 'case' ? 'block' : 'none';
+            document.getElementById('design').style.display = section === 'design' ? 'block' : 'none';
+        }
+
+        const images = [
+            'asters/asters-01.png',
+            'asters/asters-02.png',
+            'asters/asters-03.png',
+            'asters/asters-04.png',
+            'asters/asters-05.png',
+            'asters/asters-06.png',
+            'asters/asters-07.png',
+            'asters/asters-08.png'
+        ];
+
+        const imgElement = document.getElementById('randomImage');
+        const randomIndex = Math.floor(Math.random() * images.length);
+        imgElement.src = images[randomIndex];
+
+        imgElement.onclick = function() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            imgElement.src = images[randomIndex];
+        };
+
+        imgElement.onmouseover = function() {
+            imgElement.style.opacity = '90%';
+        };
+
+        imgElement.onmouseout = function() {
+            imgElement.style.opacity = '100%';
+        };
+    </script>
+</body>
+</html>
